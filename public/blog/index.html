@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+    <head>    
+        <link rel="stylesheet" type="text/css" href=/assets/css/stackbit-banner.css>
+        <title>Blog - Stackbit Exto Theme</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google" content="notranslate" />
+<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+        
+    </head>
+    <body>
+        
+            <div id="theme-bar" class="theme-bar theme-bar-fixed theme-bar-hidden">
+  <div class="theme-bar-left">
+    <div class="theme-bar-name">
+        Exto
+    </div>
+  </div>
+  <div class="theme-bar-center">
+    
+    <a
+      class="theme-bar-button theme-bar-button-outlined"
+      href="https://github.com/stackbithq/stackbit-theme-exto"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+        <path
+          fill="currentColor"
+          d="M384 144c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 36.4 24.3 67.1 57.5 76.8-.6 16.1-4.2 28.5-11 36.9-15.4 19.2-49.3 22.4-85.2 25.7-28.2 2.6-57.4 5.4-81.3 16.9v-144c32.5-10.2 56-40.5 56-76.3 0-44.2-35.8-80-80-80S0 35.8 0 80c0 35.8 23.5 66.1 56 76.3v199.3C23.5 365.9 0 396.2 0 432c0 44.2 35.8 80 80 80s80-35.8 80-80c0-34-21.2-63.1-51.2-74.6 3.1-5.2 7.8-9.8 14.9-13.4 16.2-8.2 40.4-10.4 66.1-12.8 42.2-3.9 90-8.4 118.2-43.4 14-17.4 21.1-39.8 21.6-67.9 31.6-10.8 54.4-40.7 54.4-75.9zM80 64c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm0 384c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zm224-320c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16z"
+        ></path>
+      </svg>
+      <span>Fork</span>
+    </a>
+    
+    
+    <a
+      class="theme-bar-button theme-bar-button-primary"
+      href="https://app.stackbit.com/create?theme=exto"
+    >
+      <svg fill="currentColor" viewBox="0 0 131 107">
+        <defs>
+          <path
+            id="a"
+            d="M116.6 62L66.5 89.9 15.4 62c-1.9-1.1-4.4-.3-5.4 1.6-1.1 1.9-.3 4.4 1.6 5.4l53 29c1.2.7 2.7.7 3.9 0l52-29c1.9-1.1 2.6-3.5 1.5-5.4-1.1-2-3.5-2.7-5.4-1.6zm-95-18.5l44.9-25.4 50 28.9c1.9 1.1 4.4.4 5.5-1.5 1.1-1.9.4-4.4-1.5-5.5l-52-30c-1.2-.7-2.7-.7-4 0l-53 30c-2.7 1.5-2.7 5.4 0 7l53 30c1.9 1.1 4.4.4 5.5-1.5 1.1-1.9.4-4.4-1.5-5.5L21.6 43.5zM1 64.5v-20c-.4-4.6 1.7-9.3 6.3-11.9l53-30c3.9-2.2 8.6-2.2 12.4.1l52 30c4.3 2.5 6.6 7.2 6.2 11.8v20c.4 4.7-2 9.5-6.4 11.9l-52 29c-3.8 2.1-8.3 2.1-12.1 0l-53-29C3 74 .7 69.3 1 64.5z"
+          />
+        </defs>
+        <use fill-rule="evenodd" xlink:href="#a" />
+      </svg>
+      <span>New Site</span>
+    </a>
+    
+  </div>
+  <div class="theme-bar-right">
+    <button
+      id="remove-theme-bar"
+      class="theme-bar-button theme-bar-button-link"
+    >
+      <svg viewBox="0 0 320 512" class="remove-icon">
+        <path
+          fill="currentColor"
+          d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"
+        ></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  var body = document.querySelector("body");
+  var themebar = document.querySelector("#theme-bar");
+  var hideThemeBar = sessionStorage.getItem('hideThemeBar');
+  if (body && !hideThemeBar) {
+    body.classList.add("has-theme-bar");
+    themebar.classList.remove("theme-bar-hidden");
+  }
+  document
+    .querySelector("#remove-theme-bar")
+    .addEventListener("click", function(e) {
+      e.preventDefault();
+      body.classList.remove("has-theme-bar");
+      themebar.classList.add("theme-bar-hidden");
+      sessionStorage.setItem('hideThemeBar', true);
+    });
+</script>
+
+        
+        
+<div id="page" class="site palette-light accent-pink">
+  <header id="masthead" class="site-header outer">
+  <div class="inner">
+    <div class="site-header-inside">
+      <div class="site-branding">
+        
+        
+        <h1 class="site-title"><a href='/'>Exto</a></h1>
+        
+      </div><!-- .site-branding -->
+      
+      <nav id="main-navigation" class="site-navigation" aria-label="Main Navigation">
+        <div class="site-nav-inside">
+          <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Open Menu</span><span class="icon-close" aria-hidden="true"></span></button>
+          <ul class="menu">
+            
+            <li class="menu-item ">
+              <a href="/">Home</a>
+            </li>
+            
+            <li class="menu-item ">
+              <a href="/portfolio/">Portfolio</a>
+            </li>
+            
+            <li class="menu-item  current-menu-item">
+              <a href="/blog/">Blog</a>
+            </li>
+            
+            <li class="menu-item ">
+              <a href="/style-guide/">Style Guide</a>
+            </li>
+            
+            <li class="menu-item ">
+              <a href="/about/">About</a>
+            </li>
+            
+            <li class="menu-item ">
+              <a href="/contact/">Contact</a>
+            </li>
+            
+          </ul><!-- .menu -->
+        </div><!-- .site-nav-inside -->
+      </nav><!-- .site-navigation -->
+      <button id="menu-open" class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span class="icon-menu" aria-hidden="true"></span></button>
+      
+    </div><!-- .site-header-inside -->
+  </div><!-- .inner -->
+</header><!-- .site-header -->
+  <main id="content" class="site-content">
+    
+
+<div class="outer">
+  <div class="inner">
+
+    <div class="post-feed">
+      
+      
+      <article class="post">
+        <header class="post-header inner-small">
+          <h2 class="post-title line-top"><a href="/posts/2019-03-27-why-fonts-matter/" rel="bookmark">Why Fonts Matter</a></h2>
+          <div class="post-meta">
+            <time class="published"
+              datetime="2019-03-27 00:00">March 27, 2019</time>
+          </div>
+          
+        </header><!-- .post-header -->
+        
+        <a class="post-thumbnail" href="/posts/2019-03-27-why-fonts-matter/">
+          <img class="thumbnail" src="/images/12.jpg" alt="Why Fonts Matter" />
+        </a>
+        
+        
+        <div class="post-excerpt inner-small">
+          <p>Amet nibh adipiscing adipiscing. Commodo ante vis placerat interdum massa massa primis. Tempus condimentum tempus non ac varius cubilia adipiscing placerat lorem turpis at.</p>
+        </div>
+        
+      </article><!-- .post -->
+      
+      <article class="post">
+        <header class="post-header inner-small">
+          <h2 class="post-title line-top"><a href="/posts/2019-03-24-workplace/" rel="bookmark">The Elements of Great Workplace Design</a></h2>
+          <div class="post-meta">
+            <time class="published"
+              datetime="2019-03-24 00:00">March 24, 2019</time>
+          </div>
+          
+        </header><!-- .post-header -->
+        
+        <a class="post-thumbnail" href="/posts/2019-03-24-workplace/">
+          <img class="thumbnail" src="/images/11.jpg" alt="The Elements of Great Workplace Design" />
+        </a>
+        
+        
+        <div class="post-excerpt inner-small">
+          <p>Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan sapien blandit ac amet faucibus aliquet placerat commodo. Antealiquet commodo accumsan vis phasellus adipiscing. </p>
+        </div>
+        
+      </article><!-- .post -->
+      
+      <article class="post">
+        <header class="post-header inner-small">
+          <h2 class="post-title line-top"><a href="/posts/2019-03-10-street-photography/" rel="bookmark">Understanding Street Photography</a></h2>
+          <div class="post-meta">
+            <time class="published"
+              datetime="2019-03-10 00:00">March 10, 2019</time>
+          </div>
+          
+        </header><!-- .post-header -->
+        
+        <a class="post-thumbnail" href="/posts/2019-03-10-street-photography/">
+          <img class="thumbnail" src="/images/8.jpg" alt="Understanding Street Photography" />
+        </a>
+        
+        
+        <div class="post-excerpt inner-small">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac ut consequat semper viverra nam libero justo laoreet sit.</p>
+        </div>
+        
+      </article><!-- .post -->
+      
+      <article class="post">
+        <header class="post-header inner-small">
+          <h2 class="post-title line-top"><a href="/posts/2018-01-15-function-of-design /" rel="bookmark">The function of design is letting design function</a></h2>
+          <div class="post-meta">
+            <time class="published"
+              datetime="2018-01-15 00:00">January 15, 2018</time>
+          </div>
+          
+          <div class="post-subtitle">
+            A interesting tale about function of design 
+          </div><!-- .post-subtitle -->
+          
+        </header><!-- .post-header -->
+        
+        <a class="post-thumbnail" href="/posts/2018-01-15-function-of-design /">
+          <img class="thumbnail" src="/images/4.jpg" alt="The function of design is letting design function" />
+        </a>
+        
+        
+        <div class="post-excerpt inner-small">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet sit amet cursus sit amet dictum sit. Duis ut diam quam nulla porttitor massa id neque.</p>
+        </div>
+        
+      </article><!-- .post -->
+      
+      <article class="post">
+        <header class="post-header inner-small">
+          <h2 class="post-title line-top"><a href="/posts/2018-01-11-green/" rel="bookmark">Green is my favorite color</a></h2>
+          <div class="post-meta">
+            <time class="published"
+              datetime="2018-01-11 00:00">January 11, 2018</time>
+          </div>
+          
+          <div class="post-subtitle">
+            Apparently, green is my favorite colors.
+          </div><!-- .post-subtitle -->
+          
+        </header><!-- .post-header -->
+        
+        <a class="post-thumbnail" href="/posts/2018-01-11-green/">
+          <img class="thumbnail" src="/images/5.jpg" alt="Green is my favorite color" />
+        </a>
+        
+        
+        <div class="post-excerpt inner-small">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac ut consequat semper viverra nam libero justo laoreet sit.</p>
+        </div>
+        
+      </article><!-- .post -->
+      
+      <article class="post">
+        <header class="post-header inner-small">
+          <h2 class="post-title line-top"><a href="/posts/2018-01-09-games/" rel="bookmark">What are some of the best designed video games</a></h2>
+          <div class="post-meta">
+            <time class="published"
+              datetime="2018-01-09 00:00">January 09, 2018</time>
+          </div>
+          
+        </header><!-- .post-header -->
+        
+        <a class="post-thumbnail" href="/posts/2018-01-09-games/">
+          <img class="thumbnail" src="/images/6.jpg" alt="What are some of the best designed video games" />
+        </a>
+        
+        
+        <div class="post-excerpt inner-small">
+          <p>Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi. Mauris augue neque gravida in fermentum et. Tincidunt lobortis feugiat vivamus at augue.</p>
+        </div>
+        
+      </article><!-- .post -->
+      
+      <article class="post">
+        <header class="post-header inner-small">
+          <h2 class="post-title line-top"><a href="/posts/2017-03-26-interior-designer/" rel="bookmark">How To Choose An Interior Designer</a></h2>
+          <div class="post-meta">
+            <time class="published"
+              datetime="2017-03-26 00:00">March 26, 2017</time>
+          </div>
+          
+          <div class="post-subtitle">
+            Interior design is “the art or process of designing the interior, often including the exterior, of a room or building”.
+          </div><!-- .post-subtitle -->
+          
+        </header><!-- .post-header -->
+        
+        <a class="post-thumbnail" href="/posts/2017-03-26-interior-designer/">
+          <img class="thumbnail" src="/images/1.jpg" alt="How To Choose An Interior Designer" />
+        </a>
+        
+        
+        <div class="post-excerpt inner-small">
+          <p>Interior design is “the art or process of designing the interior, often including the exterior, of a room or building”. An interior designer is someone who coordinates and manages such projects. Interior design is a multifaceted profession that includes conceptual development, communicating with the stakeholders of a project and the management and execution of the design.</p>
+        </div>
+        
+      </article><!-- .post -->
+      
+      <article class="post">
+        <header class="post-header inner-small">
+          <h2 class="post-title line-top"><a href="/posts/2016-08-22-working-from-home/" rel="bookmark">The Advantages and Disadvantages of Working from Home</a></h2>
+          <div class="post-meta">
+            <time class="published"
+              datetime="2016-08-22 00:00">August 22, 2016</time>
+          </div>
+          
+        </header><!-- .post-header -->
+        
+        <a class="post-thumbnail" href="/posts/2016-08-22-working-from-home/">
+          <img class="thumbnail" src="/images/9.jpg" alt="The Advantages and Disadvantages of Working from Home" />
+        </a>
+        
+        
+        <div class="post-excerpt inner-small">
+          <p>Interdum posuere lorem ipsum dolor sit amet consectetur. Odio morbi quis commodo odio aenean sed adipiscing diam donec. Vitae congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque.</p>
+        </div>
+        
+      </article><!-- .post -->
+      
+    </div><!-- .post-feed -->
+
+    <!-- Pagination TBD -->
+    <!--
+    <nav class="pagination">
+      <div class="nav-links">
+        <a class="newer-posts button" href="#"><span class="icon-angle-left" aria-hidden="true"></span><span class="screen-reader-text">Prev</span></a>
+        <span class="page-number">Showing page X of Y</span>
+        <a class="older-posts button" href="#"><span class="screen-reader-text">Next</span><span class="icon-angle-right" aria-hidden="true"></span></a>
+      </div>
+    </nav>
+    -->
+
+  </div><!-- .inner -->
+</div><!-- .outer-->
+
+
+  </main><!-- .site-content -->
+  <footer id="colophon" class="site-footer outer">
+  <div class="inner">
+    <div class="site-footer-inside">
+      <p class="site-info">
+        &copy; Stackbit-Exto. All rights reserved.
+        &nbsp;
+        
+        <a href="https://www.stackbit.com" target="_blank" rel="noopener"
+          >Made with Stackbit</a>.
+        
+      </p><!-- .site-info -->
+      
+        <ul class="social-links">
+  
+  <li>
+    <a href="https://twitter.com/" target="_blank" rel="noopener"><span class="fab fa-twitter"
+        aria-hidden="true"></span><span class="screen-reader-text">Twitter</span></a>
+  </li>
+  
+  <li>
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener"><span class="fab fa-instagram"
+        aria-hidden="true"></span><span class="screen-reader-text">Instagram</span></a>
+  </li>
+  
+  <li>
+    <a href="https://dribbble.com/" target="_blank" rel="noopener"><span class="fab fa-dribbble"
+        aria-hidden="true"></span><span class="screen-reader-text">Dribbble</span></a>
+  </li>
+  
+  <li>
+    <a href="https://www.linkedin.com/" target="_blank" rel="noopener"><span class="fab fa-linkedin"
+        aria-hidden="true"></span><span class="screen-reader-text">LinkedIn</span></a>
+  </li>
+  
+</ul><!-- .social-links -->
+      
+    </div><!-- .site-footer-inside -->
+  </div><!-- .inner -->
+</footer><!-- .site-footer -->
+
+</div><!-- .site -->
+
+        <!-- Scripts -->
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/main.js"></script>
+
+    </body> 
+</html>
