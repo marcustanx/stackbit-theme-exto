@@ -3,15 +3,15 @@ title: "Stackbit Exto Theme"
 page_load_js: "assets/js/main.js"
 params:
   color_scheme: light
-  accent_color: blue
+  accent_color: pink
   header:
-    title: Marcus Tan's Website
+    title: Exto
     has_nav: true
   footer:
-    content: "&copy; Marcus Tan using Stackbit's Exto base theme. All rights reserved. "
+    content: "&copy; Stackbit-Exto. All rights reserved."
     links:
-      - text: Follow me on Github pls!
-        url: https://github.com/marcustanx
+      - text: Made with Stackbit
+        url: https://www.stackbit.com
         new_window: true
     has_social: true
 sass:
