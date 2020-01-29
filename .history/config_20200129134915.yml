@@ -1,0 +1,22 @@
+baseurl: "/"
+title: "Personal Page"
+page_load_js: "assets/js/main.js"
+params:
+  color_scheme: light
+  accent_color: blue
+  header:
+    title: MARCUS TAN
+    has_nav: true
+  footer:
+    content: "&copy; Marcus Tan using Stackbit's Exto base theme. All rights reserved. "
+    links:
+      - text: Follow me on Github pls!
+        url: https://github.com/marcustanx
+        new_window: true
+    has_social: true
+sass:
+  input_file: sass/main.scss.njk
+  output_file: assets/css/main.css
+  indentWidth: 4
+  outputStyle: nested
+  precision: 10
