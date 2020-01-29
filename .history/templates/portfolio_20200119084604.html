@@ -1,0 +1,48 @@
+{% extends "body.html" %}
+
+{% block content %}
+
+<div class="outer">
+  <div class="inner">
+
+    <header class="page-header inner-small">
+      <h1 class="page-title line-top">{{ page.params.title }}</h1>
+      {% if page.params.subtitle %}
+      <p class="page-subtitle">{{ page.params.subtitle }}</p>
+      {% endif %}
+    </header><!--.page-header -->
+    <div class="portfolio-feed layout-{{ page.params.layout_style }}">
+      {% set display_projects = getPages("/projects") | sort(true, true, "date") %}
+      {% for post in display_projects %}
+      <article class="post project">
+        <a href="{{ post.url | relative_url }}" class="post-link">
+          {% if post.params.thumb_img_path %}
+          <div class="post-thumbnail">
+            <img class="thumbnail" src="{{ post.params.thumb_img_path | relative_url }}" alt="{{ post.params.title }}" />
+          </div>
+          {% endif %}
+          <header class="post-header">
+            <h2 class="post-title">{{ post.params.title }}</h2>
+          </header>
+        </a><!-- .post-link -->
+      </article><!-- .project -->
+      {% endfor %}
+    </div><!-- .portfolio-feed -->
+
+    <!-- Pagination TBD -->
+    <!--
+    <nav class="pagination">
+      <div class="nav-links">
+        <a class="newer-posts button" href="#"><span class="icon-angle-left" aria-hidden="true"></span><span
+            class="screen-reader-text">Prev</span></a>
+        <span class="page-number">Showing page X of Y</span>
+        <a class="older-posts button" href="#"><span class="screen-reader-text">Next</span><span class="icon-angle-right"
+            aria-hidden="true"></span></a>
+      </div>
+    </nav>
+    -->
+    
+  </div><!-- .inner -->
+</div><!-- .outer-->
+
+{% endblock %}
